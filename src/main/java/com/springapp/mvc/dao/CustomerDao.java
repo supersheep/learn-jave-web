@@ -9,4 +9,5 @@ import java.util.List;
  */
 public interface CustomerDao {
     List<Customer> findAll();
+    Customer save(Customer customer);
 }

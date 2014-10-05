@@ -12,7 +12,7 @@ import javax.persistence.Id;
 public class Customer {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.AUTO)
     private long id;
     private String firstName;
     private String lastName;
@@ -25,8 +25,24 @@ public class Customer {
         this.lastName = lastName;
     }
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public long getId() {
+        return id;
+    }
+
     public String getFirstName() {
         return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getLastName() {
