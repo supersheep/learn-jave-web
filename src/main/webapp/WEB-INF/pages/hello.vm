@@ -1,0 +1,10 @@
+<html>
+<body>
+	<h1>${message}</h1>
+    <ul>
+    #foreach( $customer in $customers )
+        <li>$customer.getFirstName() $customer.getLastName()</li>
+    #end
+    </ul>
+</body>
+</html>
